@@ -4,7 +4,7 @@
 		text-indent:10px;
 	}
 </style>
-<nav id="sidebar" class='mx-lt-5 bg-dark' >
+<nav id="sidebar" class='mx-lt-5' style='background-color: #089000' >
 		
 		<div class="sidebar-list">
 				<?php if($_SESSION['login_type'] == 1): ?>
