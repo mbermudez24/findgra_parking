@@ -13,7 +13,8 @@
 				<a  class="nav-item nav-manage_park nav-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><span class='icon-field'><i class="fa fa-map"></i></span> Parqueadero <span class="float-right"><i class="fa fa-angle-down"></i></span></a>
 				<div class="collapse" id="collapseExample">
 					<a href="index.php?page=manage_park" class="nav-item nav-manage_park"> Ingreso</a>	
-					<a href="index.php?page=park_list" class="nav-item nav-park_list"> Lista</a>	
+					<a href="index.php?page=park_list" class="nav-item nav-park_list"> Lista</a>
+					<a href="index.php?page=manage_park" class="nav-item nav-park_list"> Reservas</a>
 				</div>
 				<a href="index.php?page=category" class="nav-item nav-category"><span class='icon-field'><i class="fa fa-list"></i></span> Categoría</a>	
 				<a href="index.php?page=location" class="nav-item nav-location"><span class='icon-field'><i class="fa fa-map"></i></span> Área Parqueo</a>
