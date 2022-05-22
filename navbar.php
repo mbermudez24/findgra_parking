@@ -18,7 +18,7 @@
 				<a href="index.php?page=category" class="nav-item nav-category"><span class='icon-field'><i class="fa fa-list"></i></span> Categoría</a>	
 				<a href="index.php?page=location" class="nav-item nav-location"><span class='icon-field'><i class="fa fa-map"></i></span> Área Parqueo</a>
 				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Usuari@s</a>
-				<a class="navbar-brand" href="#"><img src="./assets/img/img.png" height="250" width="250"></a>
+				<a class="navbar-brand" href="#"><img src="./assets/img/flogo.png" height="250" width="250"></a>
 				
 			<?php else: ?>
 				<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Inicio</a>

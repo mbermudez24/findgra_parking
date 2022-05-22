@@ -23,6 +23,10 @@ header("location:index.php?page=home");
 		width: 100%;
 	    height: calc(100%);
 	    /*background: #007bff;*/
+		background-image: url('assets/img/background.jpg');
+		background-repeat: no-repeat;
+  		background-attachment: fixed;
+  		background-size: cover;
 	}
 	main#main{
 		width:100%;
@@ -48,16 +52,27 @@ header("location:index.php?page=home");
 		align-items: center;
 		
 	}
+	/* This is for the new login */
+	#login-center{
+		position: absolute;
+		padding-top: 100px;
+		padding-left: 520px;
+		align-items: center;
+		
+	}
+
+	/* End of the new login */
 	#login-right .card{
 		margin: auto;
 		z-index: 1
 	}
 	.logo {
-    margin: auto;
-    font-size: 8rem;
+    margin: top;
+	width: 20px;
+    font-size: 2rem;
     background: white;
-    padding: .5em 0.7em;
-    border-radius: 50% 50%;
+    padding: 10em 0.7em;
+    border-radius: 50%;
     color: #000000b3;
     z-index: 10;
 }
@@ -70,18 +85,47 @@ div#login-right::before {
     height: calc(100%);
     background: #000000e0;
 }
+/* Login logo init */
+.login-logo{
+	width:20 !important;
+	border-radius: 50% !important;
+}
+/* End of login logo */
 
+/* Change color for labels */
+.control-label{
+	color:white;
+}
 </style>
 
 <body>
 
 
   <main id="main" class=" bg-dark">
-  		<div id="login-left">
-  			<div class="logo"><span class="fa fa-car"></span></div>
+  		<div id="login-center">
+			<!-- Background image -->
+			<p class="bg-image"></p>
+			<!-- End Background image -->
+  			<div class="login-logo">
+				<img src="assets/img/flogo.png" width="260"></img>
+			</div>
+			<br>
+			<div class="login-form">
+			<form id="login-form" >
+  						<div class="form-group">
+  							<label for="username" class="control-label">Username</label>
+  							<input type="text" id="username" name="username" class="form-control">
+  						</div>
+  						<div class="form-group">
+  							<label for="password" class="control-label">Password</label>
+  							<input type="password" id="password" name="password" class="form-control">
+  						</div>
+  						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
+  					</form>
+			</div>
   		</div>
 
-  		<div id="login-right">
+  		<!--<div id="login-right">
   			<div class="card col-md-8">
   				<div class="card-body">
   						
@@ -98,7 +142,7 @@ div#login-right::before {
   					</form>
   				</div>
   			</div>
-  		</div>
+  		</div>-->
    
 
   </main>
