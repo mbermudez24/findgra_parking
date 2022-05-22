@@ -17,7 +17,7 @@
   		
   		</div>
       <div class="col-md-4 float-left text-white">
-        
+        <img src="assets/img/flogo.png" width=30></img>
         <large><b>Findgra Parking</b></large>
       </div>
 	  	<div class="col-md-2 float-right text-white">

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin | Vehicle Parking Management System</title>
+  <title>Findgra Parking | Log in</title>
  	
 
 <?php include('./header.php'); ?>
@@ -56,7 +56,7 @@ header("location:index.php?page=home");
 	#login-center{
 		position: absolute;
 		padding-top: 100px;
-		padding-left: 520px;
+		padding-left: 550px;
 		align-items: center;
 		
 	}
