@@ -16,7 +16,7 @@
 				<table class="table-striped table-bordered col-md-12">
 			<thead>
 				<tr>
-					<th class="text-center">#</th>
+					<th class="text-center">ID</th>
 					<th class="text-center">Nombre</th>
 					<th class="text-center">Usuario</th>
 					<th class="text-center">Acción</th>
@@ -25,13 +25,13 @@
 			<tbody>
 				<?php
  					include 'db_connect.php';
- 					$users = $conn->query("SELECT * FROM users u order by name asc");
+ 					$users = $conn->query("SELECT * FROM users ");
  					$i = 1;
  					while($row= $users->fetch_assoc()):
 				 ?>
 				 <tr>
 				 	<td class="text-center">
-				 		<?php echo $i++ ?>
+					 <?php echo ucwords($row['id']) ?>
 				 	</td>
 				 	<td>
 				 		<?php echo ucwords($row['name']) ?>

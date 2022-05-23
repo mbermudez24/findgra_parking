@@ -13,6 +13,10 @@ foreach($user->fetch_array() as $k =>$v){
 	<form action="" id="manage-user">	
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
 		<div class="form-group">
+			<label for="name">Identificacion</label>
+			<input type="text" name="id" id="id" class="form-control" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>" required>
+		</div>
+		<div class="form-group">
 			<label for="name">Nombre</label>
 			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
 		</div>
@@ -56,7 +60,7 @@ foreach($user->fetch_array() as $k =>$v){
 					alert_toast("Datos guardados exitosamente",'success')
 					setTimeout(function(){
 						location.reload()
-					},1500)
+					},500)
 				}else{
 					$('#msg').html('<div class="alert alert-danger">Usuario existe actualmente</div>')
 					end_load()

@@ -22,15 +22,21 @@
 				<a href="index.php?page=category" class="nav-item nav-category"><span class='icon-field'><i class="fa fa-list"></i></span> Categoría</a>	
 				<a href="index.php?page=location" class="nav-item nav-location"><span class='icon-field'><i class="fa fa-map"></i></span> Área Parqueo</a>
 				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Usuarios</a>
+			
+				<a href="index.php?page=reservations" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-calendar-check"></i></span> Reservaciones</a>
+				<a href="index.php?page=facturas" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-receipt"></i></span> Facturas</a>
+
 				<div class="sidebar-decoration">
 					<a class="navbar-brand" href="#"><img src="./assets/img/flogo.png" width="200"></a>
 					<a class="navbar-brand" href="#"><img src="./assets/img/um.png" width="200"></a>
 				</div>
 			<?php else: ?>
 				<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Inicio</a>
-			<?php endif; ?>
+				<a href="index.php?page=reservations" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-calendar-check"></i></span> Reservaciones</a>
+				<a href="index.php?page=facturas" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-receipt"></i></span> Facturas</a>
+				<?php endif; ?>
 		</div>
-
+<i class="fa-solid fa-receipt"></i>
 </nav>
 <script>
 	$('.nav_collapse').click(function(){

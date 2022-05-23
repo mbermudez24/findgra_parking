@@ -36,6 +36,27 @@ Class Action {
 		header("location:login.php");
 	}
 
+	function save_factura(){
+		extract($_POST);
+		$data = " amount_due = '$importe' ";
+		$data .= ", amound_tendered = '$monto' ";
+		$data .= ", amount_change = '$cambio' ";
+		$data .= ", id = '$id' ";
+		$chk = $this->db->query("Select * from invoices where id !='$id' ")->num_rows;
+		if($chk > 0){
+			return 2;
+			exit;
+		}
+		if(empty($id)){
+			$save = $this->db->query("UPDATE invoices set ".$data." where id = ".$id);
+		}else{
+			$save = $this->db->query("INSERT INTO invoices set ".$data);
+		}
+		if($save){
+			return 1;
+		}
+	}
+
 	function save_user(){
 		extract($_POST);
 		$data = " name = '$name' ";
@@ -43,15 +64,16 @@ Class Action {
 		if(!empty($password))
 		$data .= ", password = '".md5($password)."' ";
 		$data .= ", type = '$type' ";
+		$data .= ", id = '$id' ";
 		$chk = $this->db->query("Select * from users where username = '$username' and id !='$id' ")->num_rows;
 		if($chk > 0){
 			return 2;
 			exit;
 		}
 		if(empty($id)){
-			$save = $this->db->query("INSERT INTO users set ".$data);
-		}else{
 			$save = $this->db->query("UPDATE users set ".$data." where id = ".$id);
+		}else{
+			$save = $this->db->query("INSERT INTO users set ".$data);
 		}
 		if($save){
 			return 1;

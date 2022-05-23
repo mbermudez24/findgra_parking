@@ -24,6 +24,11 @@ if($action == 'logout2'){
 	if($logout)
 		echo $logout;
 }
+if($action == 'save_factura'){
+	$save = $crud->save_factura();
+	if($save)
+		echo $save;
+}
 if($action == 'save_user'){
 	$save = $crud->save_user();
 	if($save)
@@ -46,6 +51,11 @@ if($action == "save_settings"){
 }
 if($action == "save_category"){
 	$save = $crud->save_category();
+	if($save)
+		echo $save;
+}
+if($action == "save_factura"){
+	$save = $crud->save_factura();
 	if($save)
 		echo $save;
 }

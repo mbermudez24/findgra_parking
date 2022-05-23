@@ -60,7 +60,7 @@
                                   
                                     $location = $conn->query("SELECT * FROM parking_locations where category_id = '".$crow['id']."'  order by location asc");
                                     while($lrow= $location->fetch_assoc()):
-                                        $in = $conn->query("SELECT * FROM parked_list where status = 1 and location_id = ".$lrow['id'])->num_rows;
+                                        $in = $conn->query("SELECT * FROM parked_list where status = 1 and id_ploc = ".$lrow['id'])->num_rows;
                                         $available = $lrow['capacity'] - ( $in);
 
 
@@ -98,23 +98,7 @@
             })
     }
 </script>
-<div class="row">
-    <div class="col-md-4 text-center">
-        <a href="javascript:void(0)" class="btn btn-primary" onclick="queueNow()">Next Serve</a>
-    </div>
-<div class="col-md-4">
-    <div class="card">
-        <div class="card-header bg-primary text-white"><h3 class="text-center"><b>Now Serving</b></h3></div>
-            <div class="card-body">
-                <h4 class="text-center" id="sname"></h4>
-                <hr class="divider">
-                <h3 class="text-center" id="squeue"></h3>
-                <hr class="divider">
-                <h5 class="text-center" id="window"></h5>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 <?php endif; ?>
