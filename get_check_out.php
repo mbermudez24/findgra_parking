@@ -25,27 +25,27 @@ if(isset($c[1])){
 	<div class="col-md-12 mt-2">
 		<table class="table table-bordered">
 			<tr>
-				<th>Chech-In Timestamp</th>
+				<th>Fecha de Chech-In</th>
 				<td class="text-right"><?php echo $in_timstamp ?></td>
 			</tr>
 			<tr>
-				<th>Chech-Out Timestamp</th>
+				<th>Fecha de Chech-Out</th>
 				<td class="text-right"><?php echo $now ?></td>
 			</tr>
 			<tr>
-				<th>Timestamp Difference</th>
+				<th>Diferencia de tiempo</th>
 				<td class="text-right"><?php echo $calc ." (".(number_format($ocalc,2)).")" ?></td>
 			</tr>
 			<tr>
-				<th>Vehicle Type Hourly Rate</th>
+				<th>Cobro por Hora</th>
 				<td class="text-right"><?php echo number_format($rate,2) ?></td>
 			</tr>
 			<tr>
-				<th>Amount Due</th>
+				<th>Total a pagar</th>
 				<td class="text-right"><?php echo number_format($rate * $ocalc,2) ?></td>
 			</tr>
 			<tr>
-				<th>Amount Tendered</th>
+				<th>Efectivo</th>
 				<td class="text-right">
 					<input type="hidden" name="pl_id" value="<?php echo $id ?>" class="form-control">
 					<input type="hidden" name="created_timestamp" value="<?php echo $now ?>" class="form-control">
@@ -54,7 +54,7 @@ if(isset($c[1])){
 				</td>
 			</tr>
 			<tr>
-				<th>Change</th>
+				<th>Cambio</th>
 				<td class="text-right">
 					<input type="number" name="amount_change" readonly="" step="any" class="form-control text-right">
 				</td>
