@@ -45,6 +45,15 @@ if(isset($c[1])){
 				<td class="text-right"><?php echo number_format($rate * $ocalc,2) ?></td>
 			</tr>
 			<tr>
+				<th>Compras realizadas CC</th>
+				<td class="text-right">
+					<input type="hidden" name="pl_id" value="<?php echo $id ?>" class="form-control">
+					<input type="hidden" name="created_timestamp" value="<?php echo $now ?>" class="form-control">
+					<input type="hidden" name="amount_due" value="<?php echo ($rate * $ocalc) ?>" class="form-control">
+					<input type="number" name="amount_purchases" step="any" class="form-control text-right">
+				</td>
+			</tr>
+			<tr>
 				<th>Efectivo</th>
 				<td class="text-right">
 					<input type="hidden" name="pl_id" value="<?php echo $id ?>" class="form-control">
@@ -66,6 +75,20 @@ if(isset($c[1])){
 	</div>
 </form>
 <script>
+	$('[name="amount_purchases"]').on('keyup keydown keypress change',function(){
+		var purchases = $(this).val()
+		var amount = $('[name="amount_due"]').val()
+		if(purchases >= 5 && purchases < 10){
+			change = parseFloat(amount) - parseFloat(4000)
+		}
+		else if(purchases >= 10){
+			change = parseFloat(amount) - parseFloat(8000)
+		}
+		else{
+			change = parseFloat(0)
+		}
+		$('[name="amount_change"]').val(change.toFixed(2))
+	})
 	$('[name="amount_tendered"]').on('keyup keydown keypress change',function(){
 		var tendered = $(this).val()
 		var amount = $('[name="amount_due"]').val()
