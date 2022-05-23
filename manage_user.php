@@ -53,7 +53,7 @@ foreach($user->fetch_array() as $k =>$v){
 			data:$(this).serialize(),
 			success:function(resp){
 				if(resp ==1){
-					alert_toast("Datos guardados exitósamente",'success')
+					alert_toast("Datos guardados exitosamente",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)
