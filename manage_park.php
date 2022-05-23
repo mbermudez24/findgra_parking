@@ -55,8 +55,8 @@ foreach($qry->fetch_assoc() as $k => $v){
 					</div>
 					<div class="row form-group">
 						<div class="col-md-5">
-							<label for="" class="control-label">Nombre del(la) dueñ@</label>
-							<input type="text" class="form-control" name="owner" value="<?php echo isset($owner) ? $owner : '' ?>">
+							<label for="" class="control-label">Identificación del(la) dueñ@</label>
+							<input type="number" class="form-control" name="owner" value="<?php echo isset($owner) ? $owner : '' ?>">
 						</div>
 					</div>
 					<div class="row form-group">
@@ -98,7 +98,7 @@ foreach($qry->fetch_assoc() as $k => $v){
 			success:function(resp){
 				resp = JSON.parse(resp)
 				if(resp.status == 1){
-					alert_toast("Datos guardados exitósamente","success")
+					alert_toast("Datos guardados exitosamente","success")
 					if('<?php echo !isset($id) ?>' == 1){
 						var nw = window.open("print_receipt.php?id="+resp.id,"_blank","height=500,width=800")
 						nw.print()

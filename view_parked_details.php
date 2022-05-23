@@ -25,7 +25,7 @@ if(isset($c[1])){
 		<div class="card">
 			<div class="card-header">
 				<a href="index.php?page=manage_park&id=<?php echo $id ?>" class="btn btn-sm btn-primary btn-block col-sm-2 float-right" ><i class="fa fa-edit"></i> Editar</a>
-				<a href="javascript:void(0)" id="btn_print" class="btn btn-sm btn-primary btn-block col-sm-2 float-right mr-2 mt-0" ><i class="fa fa-print"></i> Tiquete de Impresión</a>
+				<!--<a href="javascript:void(0)" id="btn_print" class="btn btn-sm btn-primary btn-block col-sm-2 float-right mr-2 mt-0" ><i class="fa fa-print"></i> Tiquete de Impresión</a>-->
 				<h4><b>No. de Referencia de Parqueo: <?php echo $ref_no ?></b> </h4>
 			</div>
 			<div class="card-body">
@@ -33,7 +33,7 @@ if(isset($c[1])){
 					<div class="col-md-6">
 						<p>Área de Estacionamiento de Vehículos: <b><?php echo $lname ?></b></p>
 						<p>Categoría de Vehículos: <b><?php echo $cname ?></b></p>
-						<p>Dueño del Vehículos: <b><?php echo $owner ?></b></p>
+						<p>Dueño del Vehículo: <b><?php echo $owner ?></b></p>
 						<p>No. de Placa: <b><?php echo $vehicle_registration ?></b></p>
 						<p>Marca del Vehículo: <b><?php echo $vehicle_brand ?></b></p>
 						<p>Descripción del Vehículo: <b><?php echo !empty($vehicle_description) ? $vehicle_description : "Sin información ingresada" ?></b></p>
@@ -41,7 +41,7 @@ if(isset($c[1])){
 					</div>
 					<div class="col-md-6">
 						<?php if($status == 1): ?>
-							<button type="button" id="checkout_btn" class="btn-sm btn btn-block col-sm-5 btn-primary"><i class="fa fa-calculator"></i> Compute to Checkout</button>
+							<button type="button" id="checkout_btn" class="btn-sm btn btn-block col-sm-5 btn-primary"><i class="fa fa-calculator"></i> Computar Checkout</button>
 						<div id="check_details"></div>
 						<?php else: ?>
 							<table class="table table-bordered" width="100%">
