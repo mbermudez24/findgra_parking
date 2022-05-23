@@ -47,7 +47,7 @@
                                 <table class="table table-bordered">
                                     <tr>
                                         <th class="text-center">Área de Parqueo</th>
-                                        <th class="text-center">Automóviles Disponibles</th>
+                                        <th class="text-center">Lugares Disponibles</th>
                                     </tr>
                                     <?php
                                     $cat = $conn->query("SELECT * FROM category order by name asc");
