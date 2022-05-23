@@ -29,6 +29,7 @@
 				</div>
 			<?php else: ?>
 				<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Inicio</a>
+				<a href="index.php?page=manage_reservation" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-calendar-plus"></i></span> Reserva</a>
 			<?php endif; ?>
 		</div>
 
